@@ -7,6 +7,7 @@ const DOM = {
 
 interface PushData {
     vapidPrivate: string;
+    vapidPublic: string;
     expTime: number;
     endpoint: string;
     keys: {
@@ -31,6 +32,7 @@ const register = async (): Promise<PushData> => {
 
     const data = {
         "vapidPrivate": keys.privateKey,
+        "vapidPublic": keys.publicKey,
         "endpoint": pushSub.endpoint,
         "expTime": pushSub.expirationTime,
         "keys": {
