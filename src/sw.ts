@@ -5,14 +5,14 @@ self.addEventListener("push", (e) => {
     e.waitUntil((async () => {
         try {
             const data = await e.data!.json();
-            new Notification(data.title ?? "Notification received", data as any);
+            await self.registration.showNotification(data.title ?? "Notification received", data as any);
         } catch (e) {
             if (e instanceof Error) {
-                new Notification("Invalid notification", {
+                await self.registration.showNotification("Invalid notification", {
                     "body": `Invalid notification: ${e.name}: ${e.message}`
                 });
             } else {
-                new Notification("Invalid notification sent", {
+                await self.registration.showNotification("Invalid notification sent", {
                     "body": `Invalid notification: ${e}`
                 });
             }
