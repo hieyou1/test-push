@@ -16,7 +16,7 @@ interface PushData {
 };
 
 const register = async (): Promise<PushData> => {
-    const swReg = await navigator.serviceWorker.register("src/sw.ts", {
+    const swReg = await navigator.serviceWorker.register("sw.js", {
         "type": "module"
     });
 
