@@ -31,8 +31,6 @@ body {
     padding: 15px;
 }
 
-/* #region all */
-
 p {
     max-width: 70ch;
     line-height: 1.6rem;
@@ -50,27 +48,20 @@ a:hover {
 }
 
 h1,
-h2,
-h3 {
+h2 {
     font-family: var(--roboto-bold);
     margin: 0;
 }
 
-h1 {
+h1,
+h2 {
     text-align: center;
 }
 
 h2 {
     font-size: 30px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 20px;
     margin-bottom: 10px;
 }
-
-/* #endregion */
 
 button {
     all: initial;
@@ -95,6 +86,10 @@ textarea {
     font-family: var(--cantarell);
 }
 
+footer {
+    text-align: center;
+}
+
 .attribs {
     font-size: xx-small;
 }
@@ -105,13 +100,55 @@ textarea {
     resize: vertical;
 }
 
-#main {
+#main,
+#cli-builder {
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+textarea,
+input {
+    border: 0px;
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#cli-builder {
+    display: none;
+}
+
+.inp-grp {
+    display: flex;
+    gap: 1ch;
+    align-items: center;
+
+    box-sizing: border-box;
     padding: 15px;
 }
 
-textarea:disabled {
+.inp-grp span {
+    width: fit-content;
+}
+
+.inp-grp input {
+    flex-grow: 1;
+}
+
+#cli-results {
+    display: none;
+}
+
+#cli-results input {
+    margin-top: 15px;
+    width: 100%;
+}
+
+textarea:disabled,
+input:disabled {
     background-color: white;
     color: black;
 }
