@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url("fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Cantarell';
+    src: url("fonts/Cantarell-Regular.ttf");
+}
+
+:root {
+    --mikeylab-color: #5f9ea0;
+    --mikeylab-yellow: #A18B4C;
+    --mikeylab-red: #a0615f;
+    --roboto-bold: "Roboto Bold", sans-serif;
+    --cantarell: "Cantarell", sans-serif;
+
+    --pfp-size: 5rem;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: var(--cantarell);
+}
+
+body {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+/* #region all */
+
+p {
+    max-width: 70ch;
+    line-height: 1.6rem;
+    font-family: var(--cantarell);
+    margin: 0;
+}
+
+a {
+    color: var(--mikeylab-color);
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--roboto-bold);
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* #endregion */
+
+button {
+    all: initial;
+
+    color: black;
+    display: block;
+    cursor: pointer;
+
+    margin: 15px auto;
+
+    padding: 15px;
+    border-radius: 10px;
+
+    width: fit-content;
+
+    background-color: var(--mikeylab-color);
+}
+
+button,
+p,
+textarea {
+    font-family: var(--cantarell);
+}
+
+.attribs {
+    font-size: xx-small;
+}
+
+textarea {
+    width: 100%;
+    height: fit-content;
+    resize: vertical;
+}
+
+#main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+textarea:disabled {
+    background-color: white;
+    color: black;
+}
+
+/* #region media */
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    button {
+        color: white;
+    }
+}
+
+/* #endregion */

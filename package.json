@@ -1,0 +1,13 @@
+{
+    "name": "mikeylab-push",
+    "version": "0.0.1",
+    "type": "module",
+    "packageManager": "pnpm@10.33.0",
+    "devDependencies": {
+        "@types/serviceworker": "^0.0.194",
+        "vite": "^8.0.8"
+    },
+    "dependencies": {
+        "idb-keyval": "^6.2.2"
+    }
+}
